@@ -85,9 +85,23 @@ Compare 14 different regression models:
 | XGBoost | 0.7564 | - | - |
 
 ### Phase 5: Cross-Validation Testing
-- **5-Fold CV** to validate R² scores
-- **Train vs Test comparison** to detect overfitting
-- **LOOCV** for most robust estimation
+- **5B**: Train-Test Gap Analysis to detect overfitting
+- **5C**: Hyperparameter tuning for Ridge Regression
+- **5D**: Hyperparameter tuning for MLP (Multi-Layer Perceptron)
+- **5E**: Compare Original Test R² vs Cross-Validation R²
+- **5F**: Leave-One-Out Cross-Validation (LOOCV) for robustness
+
+### Phase 6: Feature Engineering
+- Create new features:
+  - Interaction terms (e.g., Distance × Preparation Time)
+  - Flags for rush hour, bad weather, and high traffic
+  - Experience-to-distance ratio
+- Rebuild preprocessor and retrain models
+
+### Phase 7: Final Model Evaluation
+- Test top models (Linear Regression, Ridge, MLP) on engineered features
+- Perform new cross-validation tests
+- Select the best model for deployment
 
 ---
 
